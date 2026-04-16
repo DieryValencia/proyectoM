@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para responsividad -->
+    <title>Detalles del Producto - Café App</title>
+    {% load static %} <!-- Cargar archivos estáticos -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container"> <!-- Contenedor principal -->
+        <div class="product-detail"> <!-- Detalles del producto con estilos -->
+            <h1>{{ producto.nombre }}</h1>
+            <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+            <p><strong>Fecha de Creación:</strong> {{ producto.creado|date:"d/m/Y H:i" }}</p> <!-- Formato de fecha -->
+            <a href="{% url 'product_list' %}" class="back-link">Volver a la lista de productos</a> <!-- Enlace de vuelta estilizado -->
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS personalizado -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

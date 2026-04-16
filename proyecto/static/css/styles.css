@@ -1,0 +1,99 @@
+/* Estilos personalizados para la app de café */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente legible y moderna */
+    background: linear-gradient(135deg, #8B4513, #D2691E); /* Gradiente de colores café */
+    color: #333; /* Color de texto oscuro */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Altura mínima para cubrir toda la pantalla */
+}
+
+.container {
+    max-width: 1200px; /* Ancho máximo para responsividad */
+    margin: 0 auto; /* Centrar contenedor */
+    padding: 20px; /* Espaciado interno */
+}
+
+h1 {
+    text-align: center; /* Centrar títulos */
+    color: #FFF8DC; /* Color crema para contraste */
+    font-size: 2.5em; /* Tamaño grande */
+    margin-bottom: 30px; /* Espacio inferior */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para efecto 3D */
+}
+
+.product-list {
+    display: grid; /* Usar grid para layout responsivo */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas automáticas */
+    gap: 20px; /* Espacio entre elementos */
+    list-style: none; /* Quitar viñetas */
+    padding: 0;
+}
+
+.product-item {
+    background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    text-align: center; /* Centrar contenido */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar mouse */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Sombra más intensa */
+}
+
+.product-item a {
+    text-decoration: none; /* Quitar subrayado */
+    color: #8B4513; /* Color café */
+    font-weight: bold; /* Negrita */
+    font-size: 1.2em; /* Tamaño mediano */
+}
+
+.product-item .price {
+    color: #D2691E; /* Color más claro */
+    font-size: 1.1em; /* Tamaño ligeramente menor */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.product-detail {
+    background: rgba(255, 255, 255, 0.95); /* Fondo semi-transparente */
+    border-radius: 15px; /* Bordes más redondeados */
+    padding: 30px; /* Más espaciado */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Sombra */
+    max-width: 600px; /* Ancho máximo */
+    margin: 50px auto; /* Centrar y espacio superior */
+}
+
+.product-detail h1 {
+    color: #8B4513; /* Color café */
+    text-shadow: none; /* Sin sombra */
+}
+
+.back-link {
+    display: inline-block; /* Mostrar como bloque inline */
+    margin-top: 20px; /* Espacio superior */
+    padding: 10px 20px; /* Espaciado interno */
+    background: #D2691E; /* Fondo café claro */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background 0.3s ease; /* Transición suave */
+}
+
+.back-link:hover {
+    background: #A0522D; /* Color más oscuro al pasar mouse */
+}
+
+/* Animación de fade-in para elementos */
+.fade-in {
+    opacity: 0; /* Inicialmente invisible */
+    animation: fadeIn 1s ease-in-out forwards; /* Animación de entrada */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Hacer visible */
+    }
+}
